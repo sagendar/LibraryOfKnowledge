@@ -1,0 +1,89 @@
+body {
+    margin: 50px 0 0 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #aaa;
+    font-size: 18px;
+}
+
+h1 {
+    color: #719e40;
+    letter-spacing: -3px;
+    font-family: 'Lato', sans-serif;
+    font-size: 100px;
+    font-weight: 200;
+    margin-bottom: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}
+
+#vendingMachine {
+    width: 60%;
+    float: left;
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#coins {
+    float: right;
+    padding: 10px;
+}
+
+div#coins img {
+    width: 100px;
+    height: 100px;
+}
+
+.refund {
+    height: 5px;
+    width: 5px;
+    border: 1px solid black;
+    border-radius: 50%;
+    color: transparent;
+}
+
+.buyable {
+    background-color: green;
+}
+
+.buyableNoRefund {
+    background-color: orange;
+}
+
+.unbuyable {
+    background-color: red;
+}
+
+#refund {
+    margin: 30px;
+}
+
+#getRefund {
+    width: 115px;
+    height: 25px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.refundable {
+    background-color: green;
+}
+
+.notRefundable {
+    background-color: red;
+}

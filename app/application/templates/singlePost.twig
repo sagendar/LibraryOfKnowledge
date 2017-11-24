@@ -1,0 +1,31 @@
+{% extends "layout/index.twig" %}
+
+{% block content %}
+    <div id="content">
+        <div class="inner">
+                <!-- Post -->
+                <article class="box post post-excerpt">
+                    <header>
+                        <h2>{{ displayedPost.title }}</h2>
+                        {% if user.loggedIn %}
+                        <div id="icons">
+                            <span class="glyphicon glyphicon-edit" onclick="changePage('edit', {{ displayedPost.post_id }})"></span>
+                            <span class="glyphicon glyphicon-trash" onclick="changePage('remove', {{ displayedPost.post_id }})"></span>
+                        </div>
+                        {% endif %}
+                        <p>{{ displayedPost.subTitle }}</p>
+                    </header>
+                    <div class="info">
+                        <span class="date">{{ displayedPost.tstmp }}</span>
+                        <ul class="stats">
+                            <li><a href="/users/single/{{ displayedPost.username }}" >{{ displayedPost.username }}</a></li>
+                        </ul>
+                    </div>
+                    <a href="{{ displayedPost.titleImage }}" class="image featured"><img src="{{ displayedPost.titleImage }}" alt="" /></a>
+                    <p>
+                        {{ displayedPost.content }}
+                    </p>
+                </article>
+        </div>
+    </div>
+{% endblock %}

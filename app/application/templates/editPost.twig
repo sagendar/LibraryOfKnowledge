@@ -1,0 +1,32 @@
+{% extends "layout/index.twig" %}
+
+{% block content %}
+    <div id="content">
+        <div class="inner">
+            <!-- Post -->
+            <article class="box post post-excerpt">
+                <form action="/posts/change/{{ post.post_id }}" method="post">
+                    <header>
+                        <h3>Title</h3>
+                        <input type="text" name="title" value="{{ post.title }}" required/>
+                        <h3>Short Description</h3>
+                        <textarea rows="4" cols="50" maxlength="100" name="subTitle" required>{{ post.subTitle }}</textarea>
+                    </header>
+                    <h3>Post Title Image</h3>
+                    <input type="text" name="titleImage" value="{{ post.titleImage }}"/>
+                    <h3>Content</h3>
+                    <textarea name="content" rows="8" style="min-width: 100%" required>{{ post.content }}</textarea>
+                    <h3>Select the Post Type</h3>
+                    <select name="postTypeName">
+                        {% for postType in postTypes %}
+                            <option {%  if postType.postTypeName == post.postTypeName %} selected="selected" {% endif %} value="{{ postType.postTypeName }}">{{ postType.postTypeName }}</option>
+                            {#<option value="{{ postType.postTypeName }}">{{ postType.postTypeName }}</option>#}
+                        {% endfor %}
+                    </select>
+                    <br>
+                    <input type="submit" class="button">
+                </form>
+            </article>
+        </div>
+    </div>
+{% endblock %}

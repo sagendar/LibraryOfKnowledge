@@ -1,0 +1,24 @@
+{% extends "layout/index.twig" %}
+
+{% block content %}
+    <div id="content">
+        <div class="inner">
+
+            <!-- Post -->
+            <article class="box post post-excerpt">
+                <header>
+                    <h2>Login</h2>
+                </header>
+                <form action="/login" method="post">
+                    <h4>Username</h4>
+                    <input title="Username" type="text" name="username" required>
+                    <h4>Password</h4>
+                    <input title="Password" type="password" name="password" required>
+                    <br>
+                    <input type="submit" class="button">
+                </form>
+                <p>No Account? Register <a href="/register">here</a></p>
+            </article>
+        </div>
+    </div>
+{% endblock %}

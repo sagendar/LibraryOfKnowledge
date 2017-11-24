@@ -1,0 +1,38 @@
+{% extends "layout/index.twig" %}
+
+{% block content %}
+    <div id="content">
+        <div class="inner">
+                <!-- Post -->
+                <article class="box post post-excerpt">
+                    <header>
+                        <h2>{{ users.username }}</h2>
+                    </header>
+                    <div class="info">
+                        <span class="date">{{ users.tstmp }}</span>
+                    </div>
+                    <table class="table">
+                        <tr>
+                            <td>Firstname:</td>
+                            <td>{{ users.firstname }}</td>
+                        </tr>
+                        <tr>
+                            <td>Surname:</td>
+                            <td>{{ users.surname }}</td>
+                        </tr>
+                        <tr>
+                            <td>Country:</td>
+                            <td>{{ users.country }}</td>
+                        </tr>
+                        <tr>
+                            <td>Permission:</td>
+                            <td>{{ users.permission }}</td>
+                        </tr>
+                    </table>
+
+                    <a href="/logout" class="button">Logout</a>
+
+                </article>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout/index.twig" %}
+
+{% block content %}
+    <div id="content">
+        <div class="inner">
+
+            <!-- Post -->
+            <article class="box post post-excerpt">
+                <header>
+                    <h2>Register</h2>
+                </header>
+                <form action="/register" method="post">
+                    <h4>Username</h4>
+                    <input title="Username" type="text" name="username" required>
+                    <h4>Password</h4>
+                    <input title="Password" type="password" name="password" required>
+                    <h4>Firstname</h4>
+                    <input title="Firstname" type="text" name="firstname" required>
+                    <h4>Surname</h4>
+                    <input title="Surname" type="text" name="surname" required>
+                    <h4>Country</h4>
+                    <input title="Country" type="text" name="country" required>
+                    {#May Change Country to Drop Down#}
+                    <br>
+                    <input type="submit" class="button">
+                </form>
+                <p>Already have an account? Login <a href="/login">here</a></p>
+            </article>
+        </div>
+    </div>
+{% endblock %}
