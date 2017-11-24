@@ -1,15 +1,8 @@
-# Training Project Locomotive
+# M151 Library of Knowledge
 
-This application is one of the training projects for a new apprentice in the department E-Learning.
+This application is an application for the TBZ Modul 151. 
 
-The required documentation is on the [confluence page](https://collaborate.crealogix.com/confluence/display/CLXAPSHIP/Lokomotive).
+## Known bug
+In case that the webpage isn't loading or it isn't available, you need to restart the apache2 service with this command:
 
-## Access the application
-To access the application you will need to access the [https://development.dev/forward](https://development.dev/forward).
-
-All the available option for this website are:
-* /forward
-* /backward
-* /startStop
-* /stop
-* /stopTimer
+sudo service apache2 restart
